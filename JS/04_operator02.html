@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교 연산자</title>
+    <script>
+        var a = 10;
+        var b = 20;
+        var c = 10;
+        var f = "20";
+        var result;
+
+        result = a > b;
+        document.write("a: " + a + " , b : " + b + ", c : " + c + ", f : " + f + "<br>");
+        document.write("a > b : " + result + "<br>");
+
+        result = a < b;
+        document.write("a < b : " + result, "<br>");
+        result = a <= b;
+        document.write("a <= b : " + result, "<br>");
+
+        result = b == f; // 20 == "20" = true
+        // 동치 연산자(비교 연산자 중에서 같다라는 연산자 종류)
+        //  일반 동치 연산자(==) : 자료형 보지 않고 오로지 값으로만 비교
+        //  완전 동치 연산자(===) : 자료형까지 완전하게 모두 일치하는 값으로 비교(자바 스크립트에서만 사용하는 연산자)
+        // == : 동치 연산자인데 자바에서는 문자열과 숫자의 비교이므로 false가 나왔겠지만
+        document.write("b == f : " + result, "<br>");
+        result = b === f; // 20 === "20"
+        document.write("b === f : " + result, "<br>");
+        result = a != b;
+        document.write("a != b : " + result, "<br>");
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

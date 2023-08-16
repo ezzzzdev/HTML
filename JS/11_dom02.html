@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <p class="intro">one : p Element</p> 
+  <span class="intro"><em>two : span Element</em></span><br>
+  <p class="intro">three : p Element</p><hr>
+  <p id="demo"></p>
+
+  <form id="Frm">
+    <input type="text" id="uid" name="uid1">
+    <input type="text" name="uid1">
+    <input type="text" name="uid1">
+  </form>
+
+  <script>
+    var x = document.getElementsByClassName("intro");
+    console.log('x',x);
+    // form태그 아이디.input태그 아이디 -> 사실상 id가 uid인 input태그를 가르키는 것
+    console.log(Frm.uid);
+    console.log(Frm.uid1[1]);
+
+    document.write("x객체의 배열 길이 : " + x.length + "<br>");
+    // innerHtml은 원래는 앞의 요소를 싹 지워버리지만 혼합대입연산자를 사용하게 되면 값을 계속 뒤에 쌓아간다.
+    document.getElementById("demo").innerHTML += x[1].innerHTML;
+
+    document.getElementById("demo").innerHTML += "<br>tagName : " + x[1].tagName;
+    document.getElementById("demo").innerHTML += "<br>length : " + x.length;
+  </script>
+</body>
+</html>

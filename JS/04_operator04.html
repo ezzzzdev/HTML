@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = 7, b = 3;
+        document.write('"7" + 3 = ' + a + b + '<br>'); // 7은 문자열이고 3은 숫자형이라 합하면 그대로 출력되어 73으로
+        document.write('"7" + 3 = ' , a + b , '<br>'); // 10으로 계산된다
+        document.write("(7+3) = " + (a + b) + "<br>"); // 7+3을 먼저 계산 -> 10
+
+        document.write("(7 == 3) : " + (a == b) + "<br>"); // ==, ===, != 이 3가지는 t/f 반환
+        document.write("(7 != 3) : " + (a != b) + "<br>");
+
+        document.write("(!false) : " + (!false) + "<br>"); // false의 부정 = true
+        // 자바스크립트에서 "!부정자료형" 형식은 숫자 0, 또는 "",
+        // null , undefined 값을 제외한 모든 것을 true로 인식한다.
+        document.write("(!0) : " + (!0) + "<br>"); // 0= false -> !0 = true
+
+        document.write('(!"wow") : ' + (!"wow") + "<br>"); // ("wow") = true -> (!"wow") = false
+        document.write('(!"") : ' + (!"") + "<br>");// ("") = false => (!"") = true
+        document.write("(!null) : " + (!null) + "<br>"); // ("null") = false -> (!"null") = true
+        document.write("(!undefined) :" + (!undefined) + "<br>"); // (undefined) = false -> (!undefined) = true
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

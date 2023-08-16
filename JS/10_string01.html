@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = "안녕 웹! Hello web! javascript";
+        document.write("원본문자 : <h1>&nbsp;" + str + "&nbsp;&nbsp</h1><br>");
+        document.write("문자열 길이 : " + str.length + "<br>");
+        document.write("해당 위치의 문자 : " str.charAt(4) + "<br>");
+
+        // 문자 하나만 쓸 경우 왼쪽부터 제일 먼저 찾은 인덱스 번호를 반환한다, 뒤에 인덱스 번호를 써주면 거기서부터 찾는다
+        document.write("해당 문자의 위치(정방향)" + str.indexOf("e")+ "<br>");
+        // 21번부터 시작하는데 lastIndexOf는 역방향으로 찾고, 없을 경우 -1을 반환한다.
+        document.write("해당 문자의 위치(역방향)" + str.lastIndexOf("H",21)+ "<br>");
+
+        // 해당 인덱스 번호에 있는 문자의 유니코드 값을 반환.
+        document.write("해당 문자의 유니코드 값 반환 : " + str.charCodeAt(1) + "<br>");
+        // 65라는 문자의 유니코드의 문자를 반환한다.
+        document.write("해당 유니코드의 문자 반환 : " + String.fromCharCode(65) + "<br>");
+
+        document.write("문자열 결합(뒤로) : " + str.concat("안녕 웹") + "<br>");
+        document.write("문자열 변경 : " + str.replace("web","world") + "<br>");
+
+        // substr(시작 인덱스 번호, 마지막 인덱스 번호(지정값-1))
+        // 시작 인덱스 ~ 마지막 인덱스 번호까지의 문자열을 추출함
+
+        
+        document.write("문자열 반환 subString(3,5) : " + str.substring(3,5) + "<br>");
+
+        // slice(시작 인덱스번호, 마지막 인덱스 번호(지정값-1))
+        // 시작 인덱스 ~ 마지막인덱스 번호까지의 문자열을 추출함
+        document.write("문자열 반환 slice(3) :" + str.slice(3) + "<br>");
+        document.write("문자열 반환 slice(2,5) : " + str.slice(2,5) + "<br>");
+
+        // 문자열 값을 찾을때 없으면 null값 반환
+        document.write("문자열 찾기(문자열값 반환 : ) " + str.match("web"),"<br>");
+        // 인덱스 번호를 찾을때 없으면 -1값 반환
+        document.write("문자열 찾기(인덱스 처음값 반환 : )" + str.search("web") + "<br>");
+
+        var str1 ="  Hello web!     ";
+        console.log("공백 제거 전 : ", str1);
+        console.log("앞 뒤 공백 제거 : " + str1.trim());
+
+        document.write("공백 제거 전 : ")
+
+        // split(구분자) : 해당 구분자로 나눈다음에 나눈것을 배열형태로 반환해라
+        // 자바의 split이랑 다른 점은 js에서는 구분자만 지정하면 형태에 상관 없이 다 내보내주지만 java에서는 추가 설정을 해줘야했다
+
+    </script>
+    
+</body>
+</html>

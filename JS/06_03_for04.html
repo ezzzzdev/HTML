@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>제목</title>
+    <script>
+        var data =  prompt("숫자 5개 입력(,로 구분)" , "0");
+        // 입력 예시 : 99,88,77
+        var arr = data.split(",");
+        var max = arr[0];
+        var min = arr[0];
+        console.log('min : ' + min + ', max = ' + max);
+
+        for( var i = 0 ; i<arr.length; i++){
+            console.log ("arr[" + i + "]요소"  + arr[i]);
+            // parseInt : 뒤에 붙어 있는 문자는 잘 떼어서 숫자를 가져온다(숫자가 연속되어있으면)
+        }if(parseInt(max) < parseInt(arr[i]))
+            max = arr[i];
+            console.log('max[' + i + ']'+ max + 'arr[' + i + ']' + arr[i])
+        
+        if(parseInt(min) > parseInt(arr[i]))
+        max = arr[i];
+        console.log('min[' + i + ']'+ min + 'arr[' + i + ']' + arr[i])
+        document.write("최대값 : " + max + ", 최소값 : " + min);
+    </script></head>
+<body>
+    
+</body>
+</html>

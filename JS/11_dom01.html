@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p id="intro"><a href="#">Hello world!</a></p>
+    <p id = "demo"></p>
+    <p id = "demo2"></p>
+    <button onclick="EventFnc()">이벤트 적용</button>
+
+    <script>
+        function EventFnc(){
+        var pid = document.getElementById("intro");
+        // innerHTML : 앞에서처럼 연결되면 앞의 자식으로 존재하는 요소들을 HTML형식으로 넣어라
+        // 뒤에서처럼 값자리에 오게되면 요소를 가지고 옴
+        document.getElementById("demo").innerHTML = pid.innerHTML;
+        // innerText : 똑같이 가져오는데 요소를 제외한 text만 가지고 온다.
+        document.getElementById("demo2").innerHTML = pid.innerText;
+    }
+    </script>
+    
+</body>
+</html>

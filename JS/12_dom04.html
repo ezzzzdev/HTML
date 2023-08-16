@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .divBox{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        // onload : 웹문서가 로딩될때 자동으로 실행되는 것
+        window.onload = function(){
+            // createElement(태그명) : 웹 문서 내에 해당 엘리먼트(태그)를 만들어준다
+            // 객체명.setAttribute("속성명", "속성값") : 해당 객체의 속성을 설정해 준다.
+            // appendChild(객체명) : 웹문서내의 지정 요소안의 맨 마지막에 자식 요소로 해당 객체를 추가해준다.
+            // 이전의 객체들(텍스트를 포함한 모든 엘리먼트 요소들)은 유지됨.
+            var pic = document.createElement('img');
+            // setAttribute : 기존에 속성이 있다면 변경하고, 속성이 없으면 추가해준다.
+            pic.setAttribute('src', '../img/history.png');
+            // <img src = "../img/history.png">
+            // appendChild : p태그 안에 동생(자식)으로 추가해라
+            document.body.getElementsByTagName("p")[0].appendChild(pic);
+            // document.body.appendChild(pic);
+        }
+
+        function rmAttr(){
+            document.getElementsByTagName('DIV')[0].removeAttribute('class');
+        }
+
+        function addAttr(){
+            document.getElementsByTagName('DIV')[0].setAttribute('class','divBox');
+        }
+    </script>
+</head>
+<body>
+    <p>Hello Dom <br><br></p>
+    <p>Document Object Model</p>
+    <button onclick="addAttr()">박스 생성</button>
+    <button onclick="rmAttr()">박스 삭제</button>
+    <div></div>
+</body>
+</html>

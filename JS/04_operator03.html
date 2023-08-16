@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+    <script>
+        // 자바스크립트의 == 연산자는 다른 언어와는 다르게 강제 형변환을 실행한다.
+        // c언어류에서는 true는 1의 값, false는 0의 값으로 바꿀 수 있음
+        document.write(254 == "254", "<br>");
+        document.write(false == null, "<br>");
+        document.write(false == undefined, "<br>");
+        // undefined : 정의 되지 않았다.
+        document.write(false == 0, "<br>");
+        document.write(true == 1, "<br>");
+        document.write(true != 2, "<br>");
+        document.write(undefined == null, "<br><hr>")
+
+        // === 연산자 : 형 변환 처리를 하지 않고 비교함
+        document.write(254 === "254", "<br>");
+        document.write(false === null, "<br>");
+        document.write(false === undefined, "<br>");
+        document.write(false === 0, "<br>");
+        document.write(true === 1, "<br>");
+        document.write(true != 2, "<br>");
+        document.write(undefined === null, "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

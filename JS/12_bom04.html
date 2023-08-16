@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="cfn()">클릭</button><br>
+    <button onclick="vfn()">클릭</button><br>
+    <script>
+
+        document.write("화면의 너비(width)는 : " +screen.width);
+        document.write("<br>화면의 폭(height)은 : " + screen.height);
+
+        // 하단 작업 표시줄을 제외한 가용가능 화면의 w/h
+        document.write("<br>작업표시줄을 제외한 화면의 너비는(width) : " + screen.availWidth);
+        document.write("<br>작업표시줄을 제외한 화면의 폭(height)은 : " + screen.availHeight);
+
+        // 실질적으로 브라우저의 창이 생기는 크기
+        document.write("<br>브라우저의 너비(width)는 : " + window.innerWidth);
+        document.write("<br>브라우저의 폭(height)은 : " + window.innerHeight);
+
+        function cfn(){
+            var pic = document.getElementById('demo');
+
+            pic.style.width = screen.availWidth +  "px";
+            pic.style.height = screen.availHeight +  "px";
+            pic.style.backgroundColor = "green";
+        }
+
+        function vfn(){
+            var pic = document.getElementById('demo');
+
+            pic.style.width = "100vw";
+            pic.style.height = "100vh";
+            pic.style.backgroundColor = "red";
+        }
+
+    </script>
+    <div id = "demo">div박스</div>
+</body>
+</html>
