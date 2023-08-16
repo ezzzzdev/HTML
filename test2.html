@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .logo{
+            width: 100px;
+            height: 20px;
+        }
+        
+        input{
+            padding-left: 40px;
+            font-size: 10px;
+            width: 300px;
+            height: 30px;
+            border: 1px solid rgba(128, 128, 128, 0.3);
+        }
+
+        input:focus{
+            outline: 1px solid rgb(122, 231, 122);
+        }
+
+        div{
+            width: 300px;
+        }
+
+        input.toprad{
+            border-radius: 5px 5px 0 0;
+        }
+
+        input.botrad{
+            border-radius: 0 0 5px 5px;
+        }
+
+
+        img{
+            width: 15px;
+            height: 15px;
+            margin-left: 5px;
+        }
+
+        #id{
+            background-image: url(./img/id.png);
+            background-repeat: no-repeat;
+            background-size: 13px;  
+            background-position: 5px center;
+        }
+
+        #pw{
+            background-image: url(./img/password.png);
+            background-repeat: no-repeat;
+            background-size: 13px;  
+            background-position: 5px center;
+        }
+
+        #email{
+            background-image: url(./img/email.png);
+            background-repeat: no-repeat;
+            background-size: 13px;  
+            background-position: 5px center;
+        }
+
+        #birth{
+            background-image: url(./img/email.png);
+            background-repeat: no-repeat;
+            background-size: 13px;  
+            background-position: 5px center;
+            size: 8;
+        }
+
+        #tel{
+            background-image: url(./img/telephone.png);
+            background-repeat: no-repeat;
+            background-size: 13px;  
+            background-position: 5px center;
+        }
+
+        div.one{
+            border: 1px solid rgba(128, 128, 128, 0.3);
+            width: 342px;
+            background-image: url(./img/telecom.png);
+            background-repeat: no-repeat;
+            background-size: 13px;  
+            background-position: 5px center;
+        }
+
+
+        div.two{
+            border: 1px solid rgba(128, 128, 128, 0.3);
+            width: 332px;
+            padding: 5px;
+        }
+
+        button{
+            border: 1px solid rgba(128, 128, 128, 0.7);
+            color: rgba(128, 128, 128, 0.7);
+            background-color: white;
+            width: 80px;
+        }
+
+        button.last{
+            background-color: green;
+            color: white;
+            width: 345px;
+            height: 40px;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        button:hover{
+            cursor: pointer;
+        }
+
+        select{
+            width: 300px;
+            height: 30px;
+            border: none;
+            text-align: left;
+            margin-left: 40px;
+            color: rgba(128, 128, 128, 0.3);
+        } 
+
+        button::selection{
+            border-color: rgb(122, 231, 122);
+            color : rgb(122, 231, 122);
+        }
+    </style>
+</head>
+<body>
+    <img class="logo" src="./img/naverLogo.png" alt="naver"><br><br>
+
+    <form>
+        <div><input type="id" id="id" class="toprad" name="id" placeholder="아이디" ></div>        
+        <div><input type="password" id="pw" name="pw" placeholder="비밀번호"><br></div>
+        <div><input type="email" id="email"  class="botrad" name="email" placeholder="[선택] 비밀번호 분실 시 확인용 이메일"></div>
+    </form>
+    <br>
+
+    <form>
+        <div><input type="text" id="id" class="toprad" name="name" placeholder="이름"></div>
+        <div><input type="text" id="birth" name="birth" placeholder="생년월일 8자리"></div>
+        <div class="one"><select name="통신사 선택">
+            <option value="none" selected disabled>통신사 선택</option>
+            <option value="KT">KT</option>
+            <option value="SKT">SKT</option>
+            <option value="LG">LG</option>
+        </select></div>
+        <div class="two"><button>남자</button><button style="margin-right: 3px;">여자</button><button>내국인</button><button>외국인</button></div>
+        <div><input id="tel" class="botrad" type="text" placeholder="휴대전화번호" onclick=""></div><br>
+        <button class="last">인증요청</button>
+    </form>
+
+</body>
+</html>
