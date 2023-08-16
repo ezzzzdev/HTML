@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>조합 선택자</title>
+    <style>
+        div {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        /* 인접 형제 선택자 */
+        /* CSS 선택자는 나의 동생만 선택 */
+        /* 앞에 있는 요소에서 바로 뒤에 붙은 h1인 동생(반드시 있어야 한다.) */
+        div+h1 {
+            background-color: green;
+            color: white;
+        }
+
+        /* 일반 형제 선택자 */
+        /* p태그를 기준으로 나의 동생들만(나보다 아래 있는,나보다 늦게 선언된 선택자들)  */
+        p~h2 {
+            background-color: rgb(59, 55, 55);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>h1의 1</h1>
+    <div>
+        <h1>h1의 2</h1>
+        <h1>h1의 3</h1>
+    </div>
+    <h1>h1의 4</h1>
+    <h1>h1의 5</h1>
+
+    <div>
+        <h1>h1의 6</h1>
+        <h1>h1의 7</h1>
+    </div>
+    <h1>h1의 8</h1>
+    <h1>h1의 9</h1>
+    <hr>
+
+    <h2>h2의 1</h2>
+    <p>p의 1</p>
+
+    <h2>h2의 2</h2>
+    <h2>h2의 3</h2>
+    <h1>h1의 10</h1>
+    <h2>h2의 4</h2>
+    <h2>h2의 5</h2>
+
+    <br><br>
+</body>
+
+</html>

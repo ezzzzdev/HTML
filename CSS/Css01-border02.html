@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <style>
+        table {
+            width: 100%;
+            font-family: Georgia;
+            font-style: italic;
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+
+        /* 한칸 공백 : 자식 포함 자손을 의미 */
+        table td {
+            border: 1px solid #ff0000;
+            padding: 10px 20px
+        }
+
+        /* 사이에 . : class를 정의하기 위해 쓴 것. */
+        /* table 태그 중에서 class가 none인 것에 아래의 스타일을 적용해라 */
+        /* 아래와 같이 . 으로 table태그로 범위를 제한해 놓은 것 */
+        table.none {
+            border-style: none;
+        }
+
+        table.hidden {
+            border-style: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- h1 : 첫째 -->
+    <h1 id="none">border-style : none;</h1>
+    <!-- class : 여러 엘리먼트들(태그에 상관없이) 그 모든 태그들에 공통적으로 적용되어야하는 CSS들에게 적용하기 위한 것 -->
+    <!-- table : 둘째 -->
+    <table class="none">
+        <tr>
+            <td>Lorem</td>
+            <td>Ipsum</td>
+        </tr>
+        <tr>
+            <td>Dolor</td>
+            <td>Amet</td>
+        </tr>
+        <tr>
+            <td>Phasellus</td>
+            <td>Mauris</td>
+        </tr>
+    </table>
+    <!-- 셋째 -->
+    <h1>border-style : hidden;</h1>
+    <!-- 넷째 -->
+    <table class="hidden">
+        <tr>
+            <td>Lorem</td>
+            <td>Ipsum</td>
+        </tr>
+        <tr>
+            <td>Dolor</td>
+            <td>Amet</td>
+        </tr>
+        <tr>
+            <td>Phasellus</td>
+            <td>Mauris</td>
+        </tr>
+    </table>
+
+
+
+</body>
+
+</html>

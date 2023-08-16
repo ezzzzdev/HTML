@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+</html>
+
+<head>
+    <title>가상클랙스(:) 선택자 = 동적 의사 클래스(dynamic pseudi-class)</title>
+
+    <style>
+        /* 아무것도 실행되지 않은 상태(초기 상태) */
+        a:link {
+            color: red;
+        }
+
+        /* 해당 링크를 방문하고 난 후의 상태(방문기록이 남은 상태) */
+        a:visited {
+            color: green;
+        }
+
+        /* 마우스 포인터가 위에 올려져만 있는 상태 */
+        a.highlight:hover {
+            color: green;
+        }
+
+        a:hover {
+            color: yellow;
+        }
+
+        a:hover {
+            color: hotpink;
+        }
+
+        /* 마우스를 누르고 있는 상태 */
+        a:active {
+            color: blue;
+        }
+
+        /* 마우스를 누르고 있는 상태. 클래스로 허버를 명시할 경우에는 동일하게 선택자를 맞추어 active 처리를 해주어야 한다. */
+        a.highlight:active {
+            color: gray;
+        }
+
+        input {
+            border: 3px solid #FFEFD5;
+            width: 300px;
+            padding: 10px;
+
+            outline: none;
+        }
+
+        input:focus {
+            border: 3px solid #CD853F;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>CSS Links</h2>
+    <p>
+        <b>
+            <a href="https://www.daum.net" target="_blank"> Daum</a>
+
+        </b>
+    </p>
+
+    <p>
+        <a class="highlight" href="https://www.naver.com" target="_blank">네이버로 이동</a>
+    </p>
+    <!-- 
+        (권장) :hover 속성은 :link와 : visited 속성 위에 와야한다
+        (권장) : :active 속성은 :hover 속성 뒤에 와야한다.
+        위의 규칙이 지켜지지 않을 경우 : :active나 :hover 솓성이 적용 안될 수 있다.
+        (권장 순서) :link -> :visited -> :hover -> :active
+     -->
+    <br><br>
+
+    <h1>input 요소의 스타일 설정</h1>
+    <form>
+        아래의 입력 양식을 마우스로 클릭해 보세요! <br><br>
+        <div>
+            <!-- input에서 outline : none으로 해주면 focus 상태에서 바깥의 테두리가 나타나지 않는다. -->
+            <input type="text" id="email" name="email" value="마우스로 클릭해 보세요!">
+        </div>
+        <div>
+            <input type="text" id="email" name="email" value="이름입니다.">
+        </div>
+    </form>
+</body>
+
+</html>

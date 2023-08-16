@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+
+
+        video {
+            width: 600px;
+            height: 300px;
+            background: url(../img/bg2.jpg) no-repeat top left
+        }
+    </style>
+</head>
+
+<body>
+    <h1>video 태그</h1>
+    <p>미디어 파일을 재생할수 있도록 지원해누느 요소 속성은 audio 와 동일</p>
+    <video src="../img/Painting.mp4" controls autoplay muted loop></video>
+
+    <!-- 영상은 autoplay 와 muted 같이 기술하면 자동재생이된다-->
+
+    <h1> souure 태그</h1>
+    <p>여러 미디어 파일을 한꺼번에 지정할수 있는 요소</p>
+    <di>
+        <dt> 속성값 들</dt>
+        <dd>src: 미디어 파일 경로 지정</dd>
+        <dd> type: 미디어 파일 형식을 웹 브라우저 제서 미리 알려줌 해당 파일 재생가능 여부 확인</dd>
+
+    </di>
+
+    <video controls autoplay poster="../img/img_flower.png">
+        <source src="../img/soundofnature.mp4" type="video/mp4">
+        <soure src="../img/Painting.webm" type="video/webm">브라우저는 video 지원하지 않습니다.</soure>
+    </video>
+    <br><br><br><br><br><br><br><br><br><br>
+
+</body>
+
+</html>

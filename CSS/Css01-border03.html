@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        div.gallery {
+            margin: 5px;
+            border: 1px solid #ccc;
+            /* float : 태그들을 나란히 정렬 시키는 속성(상속이 계속 된다) */
+            /* 블록레벨 요소들은 float를 쓰는 순간 width가 컨텐츠 너비만큼으로 바뀐다. */
+            /* float : left = 왼손으로 앞의 사람을 잡아라. */
+            float: left;
+            width: 180px;
+        }
+
+        div.gallery:hover {
+            border: 3px solid #f00;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallery">
+        <a target="_blank" href="../img/img_5terre.jpg">
+            <img src="../img/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="../img/img_forest.jpg">
+            <img src="../img/img_forest.jpg" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+    </div>
+
+
+    <div class="gallery">
+        <a target="_blank" href="../img/img_lights.jpg">
+            <img src="../img/img_lights.jpg" alt="Lights" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+    </div>
+
+
+    <div class="gallery">
+        <a target="_blank" href="../img/img_mountains.jpg">
+            <img src="../img/img_mountains.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+    </div>
+
+    <!-- clear : float로 잡은 것들을 끊어버린다. -->
+    <div style="clear:left"></div>
+    <!-- <div style="clear: right;">ㅁㅁ</div> -->
+    <!-- <div style="clear: both;"></div> -->
+    <div class="gallery">
+        <a target="_blank" href="../img/img_mountains.jpg">
+            <img src="../img/img_mountains.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="../img/img_mountains.jpg">
+            <img src="../img/img_mountains.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+    </div>
+
+</body>
+
+</html>

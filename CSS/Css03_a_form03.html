@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>fomr 속성</title>
+    <style>
+        textarea {
+            width: 80%;
+            height: 150px;
+            padding: 12px 20px;
+            /* box-sizing: border-box; */
+
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            /* 오른쪽 아래에서 사이즈 조정 가능한 이상한놈 삭제 */
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p>textarea 창 사이즈 고정하기</p>
+    <form>
+        <textarea name="text" placeholder="이곳에 텍스트를 입력하세요.">초기값입니다.</textarea>
+        <button>전송</button>
+        <!-- 인라인 속성으로 수직정렬 -> 바텀으로 해야 정렬이 된다 -->
+        <!-- input : text에서 엔터로 전송 가능, 엔터도 막을 수 있음 -->
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html {
+      font-family: helvetica, arial, sans-serif;
+    }
+
+    body {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 3rem;
+      /* letter-spacing : 자간 */
+      letter-spacing: 2px;
+      /* column-span : 단을 통합하는 속성, 원하지 않으면 1 */
+      column-span: all;
+    }
+
+    /* h1태그 바로 뒤에 p가 오는 경우 */
+    h1+p {
+      margin-top: 0;
+    }
+
+
+    /* break-inside : avoid = 글이 단락의 이동에 의해 깨지지 않도록 보호해줌 */
+    /* break-inside : auto  = auto로 설정해서 보호가 안될 경우에는 img에 추가 글, 단락 등이 끊겨서 제대로 보호가 되지 않는다. */
+    p {
+      /* line-height : 글자의 사이즈를 조정(문자 자체의 라인에서 top~bottom에서의 사이즈를 조정) */
+      line-height: 1.5;
+      /*글자의 1.5배*/
+      /* break-inside: auto; */
+      /* break-inside: avoid; */
+    }
+
+
+    figure {
+      /* 800~810px */
+      break-inside: avoid;
+      /* break-inside: auto;  */
+    }
+
+    /* max-width : 이미지의 원래 사이즈보다 작아질 때는 해당 width를 적용해 img를 깨지지 않게 만든다 */
+    /* max-width를 주기 위해서는 위의 meta name태그를 기술해주어야 한다. */
+    img {
+      max-width: 70%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    figcaption {
+      font-style: italic;
+      font-size: 0.8rem;
+      width: 70%;
+    }
+
+
+    article {
+      column-width: 200px;
+      gap: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 본문의 단락 처리 : article -->
+  <article>
+    <h1>Main heading</h1>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae
+      fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec
+      lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus.
+      Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque
+      dapibus, eu lacinia lectus dictum.
+    </p>
+
+    <figure>
+      <img
+        src="https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png" />
+      <figcaption>The Firefox logo — fox wrapped around the world</figcaption>
+    </figure>
+
+    <p>
+      Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras
+      suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur
+      a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non
+      vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie
+      nec nisi.
+    </p>
+
+    <p>
+      In finibus viverra enim vel suscipit. Quisque consequat velit eu orci
+      malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam
+      risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl,
+      sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.
+    </p>
+  </article>
+</body>
+
+</html>

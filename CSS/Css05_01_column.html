@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 레이아웃</title>
+    <style>
+        body {
+            font-family: "맑은 고딕", "고딕", "굴림";
+        }
+
+        /* 단위 : -count: 단의 개수(너비 자동 조정)로 지정, 브라우저의 너비가 변경되어도 단의 개수 변경 안됨*/
+        /* 아래와 같이 지정하면 너비에 상관없이 3개의 단으로 지정된다. */
+        /* .multi {
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            columns-count: 3;
+        } */
+
+        /* 단위 : width : 단의 크기(px)로 지정, 브라우저 너비에 따라 단 개수 변경 됨. */
+        /* column-rule(구분선) => 형식 : 선두께 선색상 선스타일 */
+        /* justify : 오른쪽, 왼쪽이 균등하게 정렬(자간도 조절이 된다) */
+        /* 단 하나를 페이지로 인식 */
+        /* gap : 각 단 사이의 공간 */
+        /* .multi{
+            -webkit-column-width : 120px;
+            -moz-column-width : 120px;
+            column-width : 120px;
+
+            -webkit-column-gap : 20px;
+            -moz-column-gap : 20px;
+            column-gap : 20px;
+
+            -webkit-column-rule :2px dotted #000
+            -moz-column-rule : 2px dotted #000;
+            column-rule : 2px dotted #000;
+
+            text-align : justify; 
+        } */
+
+        .multi {
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+
+            -webkit-column-gap: 120px;
+            -moz-column-gap: 120px;
+            column-gap: 120px;
+
+            -webkit-column-rule: 2px dotted #000;
+            -moz-column-rule: 2px dotted #000;
+            column-rule: 2px dotted #000;
+
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>건강에 좋은 식품 - Super Food</h2>
+    </header>
+
+    <div class="multi">
+        <p>
+            <b>코코넛 오일</b> :
+            남미 파나마에서는 "코코넛오일 한 컵이면 모든 병이 낫는다"라고
+            이야기할 정도로 그 효능이 뛰어나다.
+            코코넛 오일에 들어있는 중사슬 지방산은 콜레스테롤 수치에 나쁜 영향을 주지 않는 건강한 지방산이다.
+            또 라우르산이 풍부해 세균을 물리치고 염증을 가라앉히는 효과가 있다.
+            하루 권장량은 성인기준 2~4스푼(30~40mL) 정도이다.
+        </p>
+
+        <p>
+            <b>블루베리</b> :
+            남미 파나마에서는 "코코넛오일 한 컵이면 모든 병이 낫는다"라고
+            이야기할 정도로 그 효능이 뛰어나다.
+            코코넛 오일에 들어있는 중사슬 지방산은 콜레스테롤 수치에 나쁜 영향을 주지 않는 건강한 지방산이다.
+            또 라우르산이 풍부해 세균을 물리치고 염증을 가라앉히는 효과가 있다.
+            하루 권장량은 성인기준 2~4스푼(30~40mL) 정도이다.
+        </p>
+
+        <p>
+            <b>아몬드</b> :
+            남미 파나마에서는 "코코넛오일 한 컵이면 모든 병이 낫는다"라고
+            이야기할 정도로 그 효능이 뛰어나다.
+            코코넛 오일에 들어있는 중사슬 지방산은 콜레스테롤 수치에 나쁜 영향을 주지 않는 건강한 지방산이다.
+            또 라우르산이 풍부해 세균을 물리치고 염증을 가라앉히는 효과가 있다.
+            하루 권장량은 성인기준 2~4스푼(30~40mL) 정도이다.
+        </p>
+
+
+    </div>
+
+</body>
+
+</html>
