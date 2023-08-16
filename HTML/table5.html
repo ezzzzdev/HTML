@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> table Element </title>
+	<style>
+
+		table{
+			border-collapse : collapse;
+		}		
+		table,th,td,p{
+			border : 1px solid black;
+		}
+		table{
+			width : 100%;
+		}
+		
+		
+
+		th{
+			color : white;
+			width : 20%;
+			background-color : gray;
+			text-align : right;
+		}
+
+	</style>
+</head>
+<body>
+	<h2> Cell that spans two rows </h2>
+	<p> To make a cell span more than one row, use the rowspan attribute. </p>
+	<p style="width : 30%";> 테스트 텍스트 </p>
+
+	<table>
+		<tr><th> Name:</th> <td> Bill Gates </td></tr>
+		<tr><th rowspan = "2"> Telephone:</th> <td>55577854</td></tr>
+		<tr><td>55577855</td></tr>
+	</table>
+
+</body>
+</html>

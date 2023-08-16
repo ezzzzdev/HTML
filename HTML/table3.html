@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>table Element</title>
+    <style>
+      table,th,td{
+        border: 1px solid black; padding: 5px;
+      }
+      table{
+        /* border-spacing : 테이블과 테이블 사이의 간격  */
+        /* border-spacing해준 간격까지가 테이블의 영역이다. */
+        border-spacing: 15px ;
+        /* border-collapse: collapse; */
+      }
+      td,th{
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Border Spacing</h2>
+    <p>Border spacing은 셀 사이의 공간(간격)을 의미한다.</p>
+    <a href="../04/13aTag1.html">페이지 이동</a>
+
+    <table style="width: 100%;">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>80</td>
+      </tr>
+    </table>
+
+    <p>
+      <!-- strong : 태그 안에서 strong 태그 안에 있는 글씨만 boid로 강조한다. -->
+      <strong> Tip : </strong>
+      Try to change the border-spacing to 5px.
+    </p>
+  </body>
+</html>

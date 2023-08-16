@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>form 요소</title>
+  <style>
+    form {
+      border: 1px solid #000000;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>The form target attribute</h2>
+  <p>
+    When submitting this form, the result will be opened in a new browser tab
+    :
+  </p>
+  <!-- action속성, label 요소, input요소 -->
+  <!-- form 태그안의 요소들은 인라인 요소임에도 불구하고 사이즈 조정이 가능하다. -->
+  <!-- form 태그 안에서 action 속성을 기술하지 않으면 나의 페이지로 이동하기가 된다.  -->
+  <!-- form 태그 안에서 method 속성을 기술하지 않으면 디폴트는 GET방식(url에 데이터를 표시해라)이다. -->
+  <!-- <form> -->
+  <!-- <form action="19form01.html" method="get"> -->
+  <!-- <form action="19form01.html" method="post"> -->
+  <form action="19form01.html?id=admin&pw=1111" method="post">
+    <label for="firstname"> First name : </label>
+
+    <!-- input type = "text" -> 한줄 입력 창 -->
+    <!-- value= "?" -> 해당 값이 있으면 초기값으로 ?에 해당하는 값이 들어가있고, 없으면 빈 문자열(not null) -->
+    <!-- 해당 창에서  기준점은 왼쪽 위의 꼭지점, 그리고 방향은 시계 방향-->
+
+    <input type="text" id="firstname" name="firstname" value="홍">
+    <br><br>
+
+    <!-- 라벨 태그에 씌워져 있을 경우 id를 쓰지 않을 경우에도 위와 똑같이 만들 수 있게 된다. -->
+    <!-- input 태그에 name 속성은 url에서의 key값으로 사용된다. -->
+    <!-- name은 데이터 전송의 파라미터명이 되기 때문에 name이 없으면 input 태그는 쓰레기가 된다. -->
+
+    <label> Last name :
+      <input type="text" id="lastname" name="lastname" value="길동"> <!--<태그명(input) type="속성" 속성명="속성값"...>-->
+    </label><br><br>
+
+    <!-- label for에 해당하는 값이랑 id의 값이랑 동일할 경우 라벨에 해당하는 공간을 클릭시 해당 id의 공간으로 "포커스"가 이동한다. -->
+    <label for="mname"> Middle name : </label>
+    <input type="text" name="middlename" id="mname" value="중간" />
+    <br><br>
+
+    <label for="job"> Job : </label>
+    <input type="text" id="job" name="job" value="학생">
+    <br><br>
+    <!-- input type = "submit" -> 제출이란 이름의 버튼 -->
+    <!-- <input type="submit" value="가입하기"> -->
+    <button type="submit">가입하기</button>
+  </form><br>
+
+  <!-- placeholder : placeholder로 설정한 글씨를 투명한 글씨로 input 창 안에 보여줘서 안내해줌 -->
+  <input type="text" id="etcInfo" name="etcInfo" placeholder="정보를 입력하세요.">
+  <br><br>
+  <label for="etcInfo"> 그외 정보 입력 : </label>
+</body>
+
+</html>

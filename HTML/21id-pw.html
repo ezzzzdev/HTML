@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>웹 폼</title>
+</head>
+<body>
+    <form>
+        <!-- fieldset : 테두리를 가지고 안에 있는 것들을 묶어줌 -->
+        <fieldset>
+            <label> 아이디 : 
+                <!-- size="?" -> 영어 대문자가 ? 개수만큼 깨지지 않는 범위에서 받아라 = 기준이 애매모호함 => 글자의 크기에 따라 달라진다 -->
+                <input type="text" id="user_id" name="user_id" size="10">
+            </label>
+            <label> 비밀번호 : 
+                <!-- password : autocomplete(자동완성)이 되지 않는다, password 마커는 브라우저에 따라 다를 수 있다. -->
+                <input type="password" id="user_pw" name="user_pw" size="10">
+            </label>
+            <input type="submit" value="로그인">
+        </fieldset>
+    </form>
+</body>
+</html>

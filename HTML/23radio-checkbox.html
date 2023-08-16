@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>웹 폼</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <!-- radio, checkbox에 value 속성을 넣지 않으면 on이라는 값을 반환한다. -> 따라서 제대로 된 값을 반환 받으려면 value 속성을 "반드시" 기술해주어야 한다. -->
+            <legend>신청 과목</legend>
+            <p>이 달에 신청할 과목을 선택하세요 (1과목만 가능)</p>
+            <!-- radio : 단일 선택(1개만 선택 가능), o에 색 칠해지는 형식 -->
+            <!-- radio type 사용시 name은 데이터 전송의 파라미터역할도 하지만 radio를 그룹으로 묶어서 그 중 하나만 체크하도록 만든다, 하나를 체크하는 순간 해제 불가능 -->
+            <!-- label 안쪽에 같이 넣어주면 글씨를 클릭해도 체크가 된다. -->
+            <!-- 다음과 같이 checkbox, radio등은 웹 접근성을 지킬 수 있게 다음과 같이 코드를 만들어준다. -->
+            <label>
+                <input type="radio" name="subject" value="speaking">회화
+            </label>
+            <label>
+                <input type="radio" name="subject" value="grammer">문법
+            </label>
+            <label>
+                <input type="radio" name="subject" value="writing">작문
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>메일링</legend>
+            <p>메일로 받고 싶은 뉴스 주제를 선택해주세요(복수 선택 가능)</p>
+            <!-- checkbox : 다중선택(여러개 선택 가능), ㅁ에 체크모양 -->
+            <!-- checkbox type 사용시 다중 선택도 가능하며 체크 해제가 가능하다. -->
+            <label>
+                <input type="checkbox" name="mailing" value="news">해외 단신
+            </label>
+            <label>
+                <input type="checkbox" name="mailing" value = "dialog">5분 회화
+            </label>
+            <label>
+                <input type="checkbox" name="mailing" value="pops">모닝 팝스
+            </label>
+        </fieldset>
+        <input type="submit" value="전송">
+    </form>
+</body>
+</html>

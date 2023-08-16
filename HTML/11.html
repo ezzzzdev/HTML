@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ss {
+            margin: 0;
+            height: 100%;
+
+
+        }
+
+        .id {
+            border: none;
+            cursor: pointer;
+            width: 200PX;
+            font-size: 10PX;
+
+
+        }
+
+        .pw {
+            border: none;
+            cursor: pointer;
+            width: 200PX;
+            font-size: 10PX;
+
+        }
+
+        .email {
+            border: none;
+            cursor: pointer;
+            width: 200PX;
+            font-size: 10PX;
+        }
+
+        .main {
+            border: 1px solid black;
+            border-radius: 3px;
+            margin-bottom: 10px;
+
+
+            width: 250px;
+        }
+
+        .main1 {
+            border: 1px solid black;
+            border-radius: 3px;
+            width: 250px;
+            height: 250px;
+
+        }
+
+        .input {
+            width: 250px;
+        }
+
+        .ul {
+
+            list-style: none;
+
+
+        }
+
+
+
+        .ul1 {
+            list-style: none;
+        }
+
+        .button {}
+
+        P {
+            color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ss">
+        <p>naver</p>
+        <form class="form">
+            <div class="main">
+                <div><img src="li.PNG" width="20px">
+                    <input type="text" name="id" class="id" placeholder="아이디" required title="아이디">
+                </div>
+                <div>
+                    <img src="pw.PNG" width="20px">
+                    <input type="pw" class="pw" nmae="pw" placeholder="비밀번호" required title="비밀번호">
+                </div>
+                <div><img src="emil.PNG" width="20px">
+                    <input type="email" class="email" name-="email" placeholder="[선택]비밀번호 분실시 확인용 이메일" required
+                        title="이메일">
+                </div>
+            </div>
+
+            <div class="main1">
+                <div><input type="text" name="id" placeholder="이름" required title="이름"></div>
+                <div><input type="text" id="pswd" class="pawd" nmae="" placeholder="생년월일 8일자" required title="생년월일">
+                </div>
+                <div>
+                    <select id="telecomSelect">
+                        <option value="">통신사선택</option>
+                        <option value="skt">SKT</option>
+                        <option value="kt">KT</option>
+                        <option value="lg">LG</option>
+                        <option value="SKT알뜰폰">SKT알뜰폰</option>
+                        <option value="KT알뜰폰">KT알뜰폰</option>
+                        <option value="LGU+알뜰폰">LGU+알뜰폰</option>
+                    </select>
+                </div>
+
+
+
+                <div class="button">
+
+                    <ul class="ul">
+                        <li><input type="raido" value="남자"></li>
+                        <li><input type="raido" value="여자"></li>
+
+                    </ul>
+
+
+                    <ul class="ul1">
+                        <li><input type="raido" value="내국인"></li>
+                        <li><input type="raido" value="외국인"></li>
+                    </ul>
+
+
+                </div>
+
+                <div><input type="text" placeholder="휴대전화번호">
+                </div>
+            </div>
+
+
+            <div><input type="submit" value="인증요청" class="input"></div>
+        </form>
+    </div>
+
+</body>
+
+</html>

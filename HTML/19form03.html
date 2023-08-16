@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form 요소</title>
+</head>
+<body>
+    <h2>The datalist Element</h2>
+    <p>datalist 엘리먼트는 입력양식 옵션을 미리 정의하여 보여주는 태그입니다.</p>
+
+    <form action="19form03.html">
+        <!-- datalist는 input과 짝을 이루고 list속성과 datalist의 id속성을 맞추어주어야 이용 가능하다. -->
+        <!-- select는 해당 value중에 하나를 선택해야 되는 것을 강제하는 것과는 다르게 datalist는 해당 input창 안에 직접 기입해서 해당 값을 전송할 수 있다. -->
+        <!-- 만약 값을 직접 입력 값을 넣게 되면 autocomplete에 의해서 해당 기록이 캐시에 저장되어 있게 되고, 리스트에 추가 된다. 캐시를 지우게 되면 리스트에서 사라진다.-->
+        <input list="browsers" name="browser">
+        <datalist id = "browsers">
+            <option>Internet Explorer</option>
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">    
+            <option value="Safari">
+        </datalist>
+        <input type="submit">
+    </form>
+    <p><b>참고 : </b> datalist 태그는 Safari 12.1. 이전 버전에서는 지원이 되지 않습니다.</p>
+</body>
+</html>
