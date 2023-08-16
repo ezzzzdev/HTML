@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery/3.6.4/3.6.4_jquery.js"></script>
+    <script>
+        $(function () {
+            var style_1 = {
+                "background-color": "aqua",
+                "border": "2px solid #f00"
+            };
+            var style_2 = {
+                "background-color": "yellow",
+                "border": "2px dashed #f00"
+            };
+            var style_3 = { "background-color": "red" };
+            // prevAll() : 바로 이전(앞, 형) 요소들 모두 선택.
+            $(".txt").prevAll("h1").css(style_1);
+            // nextAll() : 바로 다음(뒤, 동생) 요소들 모두 선택.
+            $(".txt").nextAll("p").css(style_2);
+            // siblings() : 나빼고 전부
+            $("#wrap1 > .txt1").siblings("p").css(style_3);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <p class="txt">내용2</p><!--$(".txt")-->
+        <p>내용3</p>
+        <p>내용4</p>
+    </div>
+    <div id="wrap1">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <p class="txt1">내용2</p><!--$("#wrap1 > .txt1")-->
+        <p>내용3</p>
+        <p>내용4</p>
+    </div>
+</body>
+
+</html>

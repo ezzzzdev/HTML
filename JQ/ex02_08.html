@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="./jquery/3.6.4/3.6.4_jquery.js"></script>
+    <script>
+        $(function(){
+            var style_4 = {
+                "background-color" : "green",
+                "border" : "2px solid #555"
+            };
+            var style_5 = {
+                "background-color" : "yellow",
+                "border" : "2px solid #555"
+            };
+            // $("선택자").prevUntil("형요소명") :
+            // 선택자 요소부터 지정한 형 요소까지 그 사이에 있는 요소들만 선택.(나와 기준점 태그는 미포함)
+            $(".txt3").prevUntil(".title").css(style_4);
+            // $("선택자").nextUntil("동생요소명") :
+            // 선택자 요소부터 지정한 동생 요소까지 그 사이에 있는 요소들만 선택.(나와 기준점 태그는 미포함)
+            $(".txt3").nextUntil(".txt6").css(style_5);
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <h1 class="title">선택자</h1>
+        <p>내용1</p><!-- $(".txt3").prevAll()-->
+        <p>내용2</p><!-- $(".txt3").prev()-->
+        <p class="txt3">내용3</p><!-- $(".txt3")-->
+        <p>내용4</p><!-- $(".txt3").next(), $(".txt3 + p") -->
+        <p>내용5</p><!-- $(".txt3").nextAll()-->
+        <p class="txt6">내용6</p>
+    </div>
+</body>
+</html>
+
+<!-- frontend 연습 -->
+<!-- W3Schools -->
+<!-- title에 hover하면 MDN 나오는거 클릭 -->
+<!-- TCPSCHOOL -->
