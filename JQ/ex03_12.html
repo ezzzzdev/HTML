@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 탐색 선택자 </title>  
+<script src="http://code.jquery.com/jquery-3.6.4.js"></script>
+<script>
+    // 자바스크립트-한개의 태그
+    // 제이쿼리-태그들
+    // 처리하는데 잘 되어 있음
+	function btn( ){
+		// clone() : 해당 선택요소 복사
+		// <p>내용1</p>
+		// <p>내용2</p>
+		var copyObj = $(".box1").children().clone();
+		// var copyObj1 = document.getElementsByClassName("box1")[0].children;
+		
+		// console.log(copyObj1);
+		// remove( ) : 해당 요소 제거-타겟이 나 제거
+		// $(".box2").remove( );
+		document.body.removeChild(document.getElementsByClassName("box2")[0]);
+
+		// empty( ) : 해당 요소의 하위 요소를 모두 제거-타겟이 나의 자식태그들 제거
+		 $(".box3").empty( );   //removeChild는 한개씩밖에 못지움.
+		// document.getElementsByClassName("box3")[0].innerHTML ="";
+		// document.getElementsByClassName("box3")[0].removeChild(document.getElementsByClassName("box3")[0].getElementsByTagName("p")[0]);
+		// document.getElementsByClassName("box3")[0].removeChild(document.getElementsByClassName("box3")[0].getElementsByTagName("p")[0]);
+
+		$(".box3").append(copyObj); //appendChild 하나만 추가가능
+		// for(let i=0; i < copyObj1.length ; i++){
+		// 	document.getElementsByClassName("box3")[0].appendChild(copyObj1[i].cloneNode(true));
+		// }
+		$("button").hide();
+		// document.getElementsByTagName("button")[0].style.display = "none";
+	}
+</script></head><body>
+	<div class="box1">
+		<p>내용1</p><p>내용2</p>
+	</div>
+	<div class="box2">
+		<p>내용3</p><p>내용4</p>
+	</div>
+	<div class="box3">
+		<p>내용5</p><p>내용6</p>
+	</div>
+	<button onclick="btn()">클릭</button>
+</body>
+</html>
