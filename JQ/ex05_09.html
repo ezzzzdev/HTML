@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.4.js"></script>
+    <style>
+        /* 굳이 select 태그를 기술한 이유 */
+        /* 1. 점수를 높이기 위해 */
+        /* 2. 범위를 좁히기 위해 */
+        select#rel_site{
+            padding : 10px;
+        }
+
+        button {
+            height: 30px;
+        }
+
+        /* [] : 속성 지정자*/
+        input[type="text"]{
+            height: 26px;
+        }
+        
+    </style>
+
+    <script>
+        $(function(){
+            // on("이벤트 속성자", 콜백함수) 정적 함수
+            // id가 rel_site인 태그가 값이 바뀔때(change) function 실행 
+            $("#rel_site").on("change", function(){
+                // 텍스트 형식으로 : js의 innerText 기능
+                // text() : 값을 텍스트 형식으로 가져와라.
+                // text(값) : 값을 텍스트 형식으로 설정하라. 
+                $(".txt").text($(this).val());
+                // this가 $에 묶여있으면 jQuery 객체임
+                // 여기서의 $(this)는 event를 발생시키는 함수
+            });
+            // click을 해야 change 실행 -> change = click으로 쓸수 있다.
+            // $("#rel_site").on("click", function(){
+            //     $(".txt").text($(this).val());
+            // })
+            $("button").click(function(){
+                $("input").change();
+                // = input태그의 onchange()를 실행시켜라
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>해당 요소의 값이 변경되면 change 이벤트가 발생</h2>
+    <select id="rel_site">
+        <option value="">사이트 선택</option>
+        <option value="www.google.com">구글</option>
+        <option value="www.naver.com">네이버</option>
+        <option value="www.daum.net">다음</option>
+    </select>
+    <p class="txt"></p><br><br>
+
+    <h2>버튼을 클릭하면 input의 change 이벤트를 강제로 발생 시킴</h2>
+    <button>클릭</button>
+    <!-- HTML에서의 this.value : 해당 this.value를 감싸고 있는 최초의 태그의 value값 -->
+    <input type="text" onchange="alert(this.value)" size="60" value="버튼 클릭 시 input 엘리먼트의 onchange 이벤트 발생">
+</body>
+</html>

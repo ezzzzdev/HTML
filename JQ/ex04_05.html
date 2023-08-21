@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트</title>
+    <script src="../JQ/3.6.4.jquery.js"></script>
+    <style>
+       ul{float:left; margin: 30px;}
+    </style>
+    <script>
+        $(function(){
+            $('a').click(function(){
+                $("img").attr("src", $(this).attr("href"));//src : 이미지를 끌어오는 속성
+                //this : 이벤트가 발생된 태그 여기서는 ('a')
+                //attr("href") : 매개변수 1개여서 값을 가져와라 
+                return false; //현재 페이지에 이미지 표시하도록 설정
+            });
+        });
+    </script></head><body>
+        <ul>
+            <li><a href="img/cute_dog.jpg">사진1</a></li>
+            <li><a href="img/img_girl.jpg">사진2</a></li>
+        </ul>
+        <img>
+    </body></html>

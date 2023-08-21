@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.4.js"></script>
+    <style>
+        #dog{
+            width: 140px;
+        }
+    </style>
+    <script>
+        $(function(){
+        var iWidth = 140;
+
+        $(".zBtn .btn").on("click", zInOut);
+
+        function zInOut(){
+            if($(this).hasClass("zOut")){
+                if(iWidth<=100) return false;
+                iWidth -=10;
+            }else if($(this).hasClass("zIn")){
+                if(iWidth>=200) return false;
+                iWidth += 10;
+            }else if($(this).hasClass("back")){
+                iWidth = 140;
+            }
+            $("#dog").css({'width' : iWidth + "px"});
+        }
+    });
+
+
+    </script>
+</head>
+<body>
+    <p class="zBtn">
+    <button class="zOut btn">-</button>
+    <button class="btn back">100%</button>
+    <button class="zIn btn">+</button>
+    </p>
+    <img src="img/cute_dog.jpg" id="dog">
+</body>
+</html>

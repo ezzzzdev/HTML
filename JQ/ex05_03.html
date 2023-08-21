@@ -1,0 +1,47 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+    <title>셀렉터</title>
+    <script src="../JQ/3.6.4.jquery.js"></script>
+  
+    <script>
+        $(function(){
+            var arr=[
+                {title: '다음', url : 'www.daum.net'},
+                {title: '구글', url : 'www.google.com'}
+            ];
+        /*
+        idx : [0] , item=>{title: '다음', url : 'www.daum.net'}
+        idx : [1] , item=>{title: '구글', url : 'www.google.com'}
+        */
+
+            $.each(arr, function(index,item){
+                var result ='';
+                // result += index+' : '+item.title+' , '+item.url;
+                result += index+' : '+item;
+                console.log(result);
+                console.log(index,item);
+            });
+            console.log("==== The End 1 ====");
+
+            $.each($("#menu2 li"), function(i,o){
+            //   [0]       <li>내용2-1</li>
+            //   [1]       <li>내용2-2</li>
+            //   [2]       <li>내용2-3</li>
+                console.log(i+":",o);
+            });
+            console.log("==== The End 2 ====");
+        });
+       
+  </script></head><body>
+   <h1>탐색 선택자</h1>
+   <ul id="menu1">
+    <li>내용1-1</li>
+    <li>내용1-2</li>
+    <li>내용1-3</li>
+   </ul>
+   <ul id="menu2">
+    <li>내용2-1</li>
+    <li>내용2-2</li>
+    <li>내용2-3</li>
+   </ul>
+    </body></html>

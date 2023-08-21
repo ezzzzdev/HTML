@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.4.js"></script>
+    <style>
+        body{
+            font : 12pt "Malgun Gothic", "맑은 고딕", sans-serif;
+        }
+        /* .btn{
+            font-size : 12pt;
+        } */
+    </style>
+    <script>
+        $(function(){
+            var fSize = 14;
+            // 클래스명이 zBtn인 태그 내에서 자식으로 존재하고 클래스가 btn인 태그가 click되었을 때 zInOut 실행
+            $(".zBtn .btn").on("click",zInOut);
+
+            function zInOut(){
+                if($(this).hasClass("zOut")){
+                    if(fSize<=8) return false;
+                    fSize--;
+                }else if($(this).hasClass("zIn")){
+                    if(fSize>=50) return false;
+                    fSize++
+                }else{
+                    fSize = 12;
+                }
+                $(".fontSize").text(fSize + "pt");
+
+                /*
+                속성명 : 
+                객체로 사용시 -(대시) 제거 카멜기법으로 표기.
+                css속성명 그대로 사용하는 경우는 따옴표로 묶어줌.
+                */
+               $("body").css({'font-size' : fSize +"pt"});
+               $("#rel_site, #rel_site option").css({'font-size' : fSize + "pt"});
+            $(".btn").css({'font-size' : fSize + "pt"});
+            // $("body").css({'font-size' : fSize + "pt"});
+            }
+        });
+    </script>
+</head>
+<body>
+    <p class="zBtn">
+        <button class="btn zOut">-</button> 
+        <button class="btn originBtn">100%</button>
+        <button class="btn zIn">+</button>
+    </p>
+    <p class="fontSize">12pt</p>
+
+    <div id="wrap">
+        인류의 얼마나 인도하겠다는 거친 하여도 얼마나 열매를 청춘의 피부가 위하여서. 이상은 만물은 주는 보이는 듣는다. 자신과 실로 봄날의 원질이 웅대한 과실이 길을 지혜는 오직 있는가? 
+        무한한 그들에게 풍부하게 불어 심장은 가치를 싶이 천지는 아름다우냐? 발휘하기 살 봄바람을 가슴에 구하지 실현에 그러므로 끓는 쓸쓸하랴? 거친 청춘에서만 이상 인생에 쓸쓸하랴? 
+        방황하여도, 튼튼하며, 원질이 밝은 가슴이 새 사막이다. 실현에 품에 못하다 힘차게 품었기 물방아 안고, 이것은 그들은 사막이다. 바로 인도하겠다는 이것이야말로 위하여 영락과 끓는다. 
+        얼음 살았으며, 것은 있는 우리의 황금시대다.
+    </div>
+
+    <!-- select와 button태그등 자기의 영역이 지정되어 있는 경우는 직접 설정을 해주어야 font-size가 변경된다. -->
+    <select id="rel_site">
+        <!-- option은 padding등의 설정이 안먹고, 사이즈를 변경하기 위해서는 직접 설정을 해주어 font-size를 변경하여 사이즈 조정을 해야한다. -->
+        <option value="">사이트 선택</option>
+        <option value="www.google.com">구글</option>
+        <option value="www.naver.com">네이버</option>
+        <option value="www.daum.net">다음</option>
+    </select><br>
+
+    <input type="checkbox" name="allchk" id="allchk">
+    <label for="allchk">모두 체크</label>
+</body>
+</html>

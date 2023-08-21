@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>콜백함수</title>
+    <script src="../JQ/3.6.4.jquery.js"></script>
+    <script>
+        function btn(){
+         /*   map 방식, json(=JavaScript ObjectNotation)방식 : 
+            -자바스크립트의 오브젝트를 표기하기 위한 표기법으로 {}(중괄호) 안에 
+            key : value 형식으로 나열하는 방법이다
+            자바스크립트의 오브젝트를 표현하는 표기법임
+            형식 : {key : value, key : value, ... }=>자료형 : object, 표기방식 :json */
+            
+            // this를 쓸수 있는건 콜백함수(function(){ return "img/" + this.title + ".jpg"; });)를 사용해서
+            $("img").attr({width:"100px", height: "100px"});
+            $("img").attr("src", function(){
+                return "img/" + this.title + ".jpg"; });
+            // [0] =><img title="img_girl" alt="img_girl">
+            // [1] =><img title="cute_dog" alt="cute_dog">
+            // [2] =><img title="pic_trulli" alt="pic_trulli">
+            
+
+            // let arr = document.getElementsByTagName('img');
+		    // $("img").attr("src", "img/img_girl.jpg");
+            
+            $("img").attr("title", function(index){
+                return index + "번 img 엘리먼트 타이틀은 "+this.title;
+            });
+
+        }
+    </script></head><body>
+        <img title="img_girl" alt="img_girl"><img title="cute_dog" alt="cute_dog"><img title="pic_trulli" alt="pic_trulli">
+        <br><br><button onclick="btn()">클릭</button>
+    </body></html>
+
+
+
+
+
+
+

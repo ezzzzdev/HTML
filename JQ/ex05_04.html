@@ -1,0 +1,54 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+    <title>셀렉터</title>
+    <script src="../JQ/3.6.4.jquery.js"></script>
+    <style>
+        em{
+            font-size: 20px;
+            line-height: 20px;
+            margin: 20px;
+            color: blue;
+        }
+    </style>
+    <script>
+        var colorArr=['yellow','red','green'];
+        $(document).ready(function(){
+            $('p em').css('background-color','yellow').each(function(){
+//                 [0] <em>one</em>
+// 	               [1] <em>two</em>
+//                 [2] <em>three</em>
+                $('.result1').append($(this).text()+" ");
+            });
+            $('p em').css('background-color', function(i){
+                return colorArr[i];
+            }).each(function () {
+                    $('.result1').append($(this).text() + " ");
+                });
+                
+            $('div > em').css('background-color','pink').each(function(){
+                // [0] <em>four</em>
+                // [1] <em>six</em>
+                $('.result2').append($(this).text()+" ");
+        });
+    });   
+   
+</script></head><body>
+  <p>
+    <em>one</em>
+    <em>two</em>
+    <span><em>three</em></span>
+  </p>
+  <div>
+    <em>four</em>
+    <span><em>five</em></span>
+    <em>six</em>
+  </div><hr>
+  <div>
+    <span>ancestor descendant로 검색된 엘리먼트:</span>
+    <span class="result1"></span>
+  </div>
+  <div>
+    <span>parent &gt; child로 검색된 엘리먼트:</span>
+    <span class="result2"></span>
+  </div>
+    </body></html>

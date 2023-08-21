@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.4.js"></script>
+    <style>
+        #dog {
+            width: 300px;
+        }
+    </style>
+    <script>
+        $(function () {
+            var iWidth = 300;
+
+            $(document).on({
+                'wheel': function (event) {
+                    var wheel = event.originalEvent.wheelDelta;
+                    console.log(wheel);
+                    if (wheel > 0) {
+                        if (iWidth >= 1500) return false;
+                        iWidth += 10;
+                    } else {
+                        if (iWidth <= 10) return false;
+                        iWidth -= 10;
+                    }
+                    $('#dog').css({ 'width': iWidth + "px" });
+                    
+                },
+                'mousedown': function (e) {
+                    var mWhich = e.which;
+                    if (mWhich == 2) {
+                        iWidth = 140;
+                    }
+                    $('#dog').css({ 'width': iWidth + "px" });
+                }
+
+            });
+
+
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <h1>마우스 휠 조작</h1>
+    <a>휠 위로 : 확대, </a>
+    <a>휠 클릭 : 100%, </a>
+    <a>휠 아래로 : 축소</a>
+    <br><br>
+    <img src="img/cute_dog.jpg" id="dog">
+
+
+</body>
+
+</html>

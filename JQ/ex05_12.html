@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.4.js"></script>
+    <style>
+        img{
+             width: 140px;
+             height: 120px;
+             cursor: pointer;
+            }
+    </style>
+    <script>
+        $(function(){
+            // eq(1) : 인덱스 번호가 1번인
+            $('img').eq(1).width(190);
+            // $('img').eq(1).width("190px");
+            $('img').eq(1).height(170);
+            // $('img').eq(1).width(190).height(170);
+
+            $('body img').on("click", function(event){
+                // event.target은 이벤트가 발생한 대상 엘리먼트
+                // event.target == this
+                console.log(event);
+                // .target으로 접근 가능한 경우 : 배열이 아닌 속성이 기술되어 있는 객체인 경우 가능하다.
+                var $target = $(event.target);
+                // remove() : 나 자신을 제거해라
+                // empty() : 자식 요소들을 제거해라(안의 요소들)
+                $("#ptxt").empty();
+                // empty()를 추가하지 않을 경우 append에 의해 글씨가 계속 쌓이게 된다.
+
+                if($target.hasClass("origin")){
+                    $("#ptxt").append("원본 가로사이즈 : " + $target.width() + "px<br>");
+                    $("#ptxt").append("원본 세로사이즈 : " + $target.height() + "px" );
+                }else{
+                    $("#ptxt").append("확대 가로사이즈 : " +$target.width() + "px<br>" );
+                    $("#ptxt").append("확대 세로사이즈 : " + $target.height() + "px");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- 인덱스번호 : 0 -->
+    <img src="img/cellphone.jpg" class="origin">
+    <!-- 인덱스번호 :  1 -->
+    <img src="img/cellphone.jpg" class="large">
+    <p id="ptxt"></p>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+    <title>셀렉터</title>
+    <script src="../JQ/3.6.4.jquery.js"></script>
+  
+    <script>
+
+        $(document).ready(function(){
+
+            //그룹선택자의 엘리먼트들이 html요소의 인덱스에 맞춰 오름차순으로 정렬됨
+            var $searchEles =$('p, span, div.simpletext1');
+
+            /*
+            <span>simple</span> -0번인덱스
+            <div class='simpletext1'>jQuery</div> -1번인덱스
+            <p>example</p>  -2번인덱스
+            */
+
+            var resultText="";
+            resultText += "엘리먼트 개수: "+ $searchEles.length +"\n";
+            //resultText = resultText + "엘리먼트 개수: "+ $searchEles.length(3) +"\n";
+            $searchEles.each(function(){
+                console.log("this : "+this.tagName);  //태그이름을 가져오세요
+                console.log("$(this) : "+$(this).prop('tagName'));
+                //.prop('tagName'): 태그이름을 가져오세요
+                resultText += $(this).text()+", "; 
+                //simple,jQuery,example
+            });
+
+            // $.each($searchEles, function(){
+            //     console.log("$(this) : "+$(this).prop('tagName'));
+            //     resultText += $(this).text()+", "; 
+            // });
+            console.log($.trim(resultText));//trim: 앞뒤 공백제거
+
+            $searchEles.each(function(i){  // i : 인덱스
+                console.log(i+" : "+$(this).text());
+            });
+        });
+  </script></head><body>
+    <span>simple</span>
+    <div class='simpletext1'>jQuery</div>
+    <div>basic</div>
+    <p>example</p>
+    </body></html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>콜백함수</title>
+    <script src="../JQ/3.6.4.jquery.js"></script>
+    <style>
+        #divBox{
+            width: 300px;
+            border: 1px solid #555;
+            padding: 10px;
+        }
+    </style>
+    <script>
+      $(document).ready(function(){
+        /*정적이벤트와 동적이벤트
+        정적이벤트 : 이미 존재하는 엘리먼트에 이벤트를 등록하는 방식
+        동적이벤트 : 스크립트를 통해 생성된 엘리먼트에 이벤트를 등록하는 방식(이벤트 상속 포함)*/
+
+        // click() : 클릭이벤트를 처리하고자 할때. 정적이벤트임
+        //$("button[name='btn']") => <button name='btn'>클릭</button>
+        $("button[name='btn']").click(function () {
+        $("body").append("click!!!<br>"); });   //body태그안에 마지막 자식 뒤에 "click!!!<br>"
+
+        /*
+        동적이벤트(라이브 이벤트) 등록 방식
+        $(선택자=부모이상급 요소).on(이벤트속성, 지정자(선택자), 콜백함수) : on 함수를 이용
+        선택자를 해당 이벤트가 발생될 지정자보다 상위요소(부모, 조상 요소들)를 선택자로 해야 한다
+        지정자는 누를 타겟이 됨
+        */
+
+        // 동적이벤트(라이브 이벤트) 등록 방식. 이벤트 상속됨
+        // $(document).on("click", "button[name='add']", function () {
+        // $("body").on("click", "button[name='add']", function () {
+        $("#grdiv").on("click", "button[name='add']", function () {
+        $("#divBox").append("<button name='add'>+</button>");     });
+
+        // 선택자와 지정자가 같을 경우 실행되지 않는다.
+        // $("button[name='add']").on("click", "button[name='add']", function () {
+        // $("#divBox").append("<button name='add'>+</button>");
+        // });
+
+    //동적이벤트(라이브 이벤트) 등록 방식이 아님. 이벤트는 상속되지 않는다
+    //on : ~할때 / 이벤트 함수 속성자를 넣어주어야 함
+    //$("button[name='add']") => <button name='add'>+</button>
+    // $("button[name='add']").on("click", function(){$("#divBox").append("<button name='add'>+</bytton>");
+        //append("<button name='add'>+</bytton>") =>스크립트로 만든 태그 /이벤트 상속되지 않음
+    });
+
+     // $("button[name='add']").click(function () {
+    //  $("#divBox")=> <div id="divBox"></div>
+    //  $("#divBox").append("<button name='add'>+</button>");   });
+// });
+
+// function btnadd(){
+//     $("#divBox").append("<button name='add' onclick='btnadd()'>+</button>"); }  //자바스크립트버전
+
+</script></head><body>
+<button name='btn'>클릭</button><br> <!--스크립트가 아닌 태그로 만든것-->
+<div id="grdiv">
+<button name='add'>+</button><!--스크립트가 아닌 태그로 만든것-->
+<!-- <button name='add' onclick='btnadd()'>+</button> -->
+<div id="divBox"></div>
+   </div>
+</body></html>
